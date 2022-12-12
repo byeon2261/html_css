@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-bar">
+        <div class="top-bar">
+            <div class="top-bar__column">
+                <i class="fas fa-stream fa-lg"></i>
+            </div>
+            <div class="top-bar__column">
+                <span class="top-bar__title">library</span>
+            </div>
+            <div class="top-bar__column">
+                <i class="fas fa-shopping-basket fa-lg"></i>
+            </div>
+        </div>
+        <form class="search-bar">
+            <input class="search-bar__input" type="text" placeholder="Search books...." />
+            <!-- to do: search icon -->
+            <input class="search-bar__button" type="submit" value="&#xf002;"/>
+        </form>
+    </div>
+    <header class="today-header">
+        <div class="today-top">
+            <span>Book of the day</span>
+        </div>
+        <div class="today-main">
+            <div class="today-main-div">
+                <img class="today-main__img" src="https://marketplace.canva.com/EAD12hLZw8A/1/0/1003w/canva-%EC%9E%AC%EB%B0%8C%EB%8A%94-%EA%B4%B4%EB%AC%BC-%ED%82%A8%EB%93%A4-%EC%B1%85-%ED%91%9C%EC%A7%80-6--jrrN2aKw.jpg" />
+            </div>
+            <div class="today-main__text">
+                <div class="today-main__describtion">
+                    <h1 class="toady-main__title">No Fixed Abode</h1>
+                    <span class="toady-main__author">Journey Through</span>
+                    <div class="today-main__score">
+                        <i class="fas fa-star full-star"></i>
+                        <i class="fas fa-star full-star"></i>
+                        <i class="fas fa-star full-star"></i>
+                        <i class="fas fa-star full-star"></i>
+                        <i class="fas fa-star full-star"></i>
+                    </div>
+                </div>
+                <div class="today-main__record">
+                    <button class="today-main__record__button" onClick="location.href='index.html'">Journey</button>
+                    <button class="today-main__record__button" onClick="location.href='index.html'">biography</button>
+                </div>
+                <div class="toady-main__mark">
+                    <!-- to do: book mark img -->
+                    <button class="today-main__bookmark" onClick="location.href='index.html'"><i id="bookmark__icon" class="fas fa-bookmark fa-lg"></i></button>
+                    <button class="today-main__booknow" onClick="location.href='index.html'">book now</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="book">
+        <div class="book-top">
+            <span class="book-top__header">Top Adventures</span>
+        </div>
+        <ul class="book-list">
+            <li class="book-btn">
+                <a class="book-link" href="#"><img class="book-link__img" src="https://marketplace.canva.com/EAD145tC0UI/1/0/1003w/canva-%EA%B0%88%EC%83%89-%EC%8A%A4%ED%8C%80%ED%8E%91%ED%81%AC-%ED%95%B4%ED%84%B0-%EC%B0%BD%EC%9D%98%EC%A0%81%EC%9D%B8-%EC%A0%84%EC%9E%90%EC%B1%85-%ED%91%9C%EC%A7%80-1-PzIUTclD8.jpg" /></a>
+                <div class="book-score">
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="far fa-star fa-xs"></i>
+                </div>
+            </li>
+            <li class="book-btn">
+                <a class="book-link" href="#"><img class="book-link__img" src="https://marketplace.canva.com/EAD167GTo5o/1/0/1003w/canva-%ED%9D%B0%EC%83%89-%EC%8B%AC%ED%94%8C%ED%95%9C-%EC%8B%9D%EC%82%AC-%EC%9D%BC%EC%A7%80-%EC%B1%85-%ED%91%9C%EC%A7%80-XXx6huaTDeE.jpg" /></a>
+                <div class="book-score">
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="far fa-star fa-xs"></i>
+                    <i class="far fa-star fa-xs"></i>
+                </div>
+            </li>
+            <li class="book-btn">
+                <a class="book-link" href="#"><img class="book-link__img" src="https://marketplace.canva.com/EAD17GlOS5M/1/0/1003w/canva-%EC%A7%99%EC%9D%80-%EC%97%AC%EC%9E%90-%EC%9E%90%EC%84%9C%EC%A0%84-%EC%B1%85-%ED%91%9C%EC%A7%80-xxbXCLK4Mzw.jpg" /></a>
+                <div class="book-score">
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="far fa-star fa-xs"></i>
+                </div>
+            </li>
+            <li class="book-btn">
+                <a class="book-link" href="#"><img class="book-link__img" src="https://marketplace.canva.com/EAD14__NlQ0/1/0/1003w/canva-%EC%82%B0%ED%98%B8%EC%83%89-%EB%94%94%EC%A0%80%ED%8A%B8-%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4-%EC%BB%B5%EC%BC%80%EC%9D%B4%ED%81%AC-%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC-%EC%B1%85-%ED%91%9C%EC%A7%80-qin9nZUZwTE.jpg" /></a>
+                <div class="book-score">
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="fas fa-star fa-xs full-star"></i>
+                    <i class="far fa-star fa-xs"></i>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="author">
+        <div class="author-header">
+            <span class="author-header__span">Popular authors</span>
+        </div>
+        <div class="author-main">
+            <div class="author-picture">
+                <img class="author-picture__img" src="img/itMe.jpeg" />
+            </div>
+            <div class="author-introduce">
+                <div>
+                    <span class="author__name">
+                        G. H. Byeon
+                    </span>
+                </div>
+                    <p class="author__discription">
+                        Byeon is a great developer and master of frontend and backend. 
+                        Bill Gates also learned to code from him.
+                    </p>
+            </div>
+        </div>  
+    </div>
+    <script src="https://kit.fontawesome.com/502031b9fd.js" 
+    crossorigin="anonymous"></script>
+</body>
+</html>

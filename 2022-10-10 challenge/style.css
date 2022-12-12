@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: seashell;
+}
+header {
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 20px;
+}
+h1,h3,h4 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body > section {
+    display: flex;
+}
+
+section > div > div {
+    width: 200px;
+    height: 350px;
+    margin: 20px 10px;
+    border: 7px white solid;
+}
+section > div:first-child > div:first-child {
+    background-color: tomato;
+}
+section > div:first-child > div:last-child {
+    background-color: burlywood;
+}
+section > div:last-child > div:first-child {
+    background-color: teal;
+}
+section > div:last-child > div:last-child {
+    background-color: thistle;
+}
+
+div div div {
+    padding: 2px;
+    background-color: white;
+    position: relative;
+    top: 20px;
+}

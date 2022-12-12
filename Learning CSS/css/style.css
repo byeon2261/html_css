@@ -1,0 +1,212 @@
+/* background {
+    color: orange;
+} */
+
+h1 {
+    color: orange;
+    font-size: 20px;
+}
+
+span {
+    color: blueviolet;
+    background-color: orange;
+}
+
+#first {
+    background-color: aqua;
+    height: 150px;
+    width: 150px;
+}
+#second {
+    background-color: orangered;
+    height: 100px;
+    width: 100px;
+}
+#third {
+    background-color: chartreuse;
+    height: 50px;
+    width: 50px;
+}
+#fourth {
+    background-color: plum;
+    height: 20px;
+    width: 20px;
+}
+
+* {
+    border: 2px black dotted;
+}
+/* section div {
+    height: 70px;
+    width: 70px;
+} */
+div {    
+    background-color: rebeccapurple;
+    /* collapsing Margin : margin설정에서 부모값과 상관없이 자식값으로 설정값이 붕괴되는 현상. 위아래 마진에서 발생한다. 
+        body margin = 30px이지만 div margin = 50px로 div margin만큼 body도 벌어진다.
+    */
+    margin: 3px 1px; /* 첫번째값은 위-아래, 두번째값은 좌우값이다. 값 네개를 지정해주면 시계방향으로 적용된다. */
+    padding: 10px;
+    border: 3px black solid;
+    
+    /* inline은 높이가 없다. 그렇기때문에 화면상에서는 안보이게된다. text를 넣게 되면 텍스트 공간만큼 설정값이 표기된다. 
+        margin을 부여하면 좌우에만 적용이 된다. 상하에는 margin만큼 공간이 생기지 않는다.
+    */
+    /* display: inline; */
+}
+body {
+    background-color: white;
+    /* margin: 0px; */
+    margin-top : 20px;
+    margin: 30px 60px 600px 5px; /* 첫번째값은 위-아래, 두번째값은 좌우값이다. 값 네개를 지정해주면 시계방향으로 적용된다. */
+    padding: 20px;
+}
+html {
+    background-color: tomato;
+}
+#flex {
+    /* flex를 사용하고 나서 전부 inline식으로 구역이 없어졌다. */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row; /* column은 주축과 교차축이 서로 바뀐다. */
+    height: 20vh; /* vh :화면상 나오는 비율. 50vh는 창 크기의 50% 값 */
+    flex-wrap: wrap; /* 창 크기가 줄어들면서 공간이 부족해지면 컨텐츠가 밑으로 이동 */
+}
+
+#fix {
+    position: fixed;
+    opacity: 0.8;
+    top: 0px;
+    width: 100vh;
+    height: 40px;
+    background-color: bisque;
+    background-image: url("https://mdn.mozillademos.org/files/7693/catfront.png");
+    /* background-image: url("img/3.jpg"); */
+}
+
+.nor-div {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: wheat;
+    height: 50px;
+    width: 50px;
+}
+
+div:last-child {
+    background-color: red;
+}
+div:first-child {
+    background-color: purple;
+}
+
+section {
+    height: 250px;
+    padding: 40px;
+}
+
+#rel-point {
+    /* position: relative; */
+    background-color: teal;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+#abs-point {
+    background-color: brown;
+    height: 30px;
+    width: 30px;
+    position: absolute; /* 부모중에 relative속성을 가진 tag를 찾아서 그 태그 기준으로 값이 변경된다. 
+                            다음 설정에는 div부모가 saction인데 relative속성이 아니기때문에 body를 기준으로 변경됨.
+                            relative속성이 없다면 body기준으로 변경이됨. */
+    /* fixed, relative, absolate, static(default) 
+       relative-absolate 두 설정 기억하기!
+    */                        
+    right: 0px;
+    /* bottom: 0px; */
+}
+
+/* span:nth-child(odd) { 
+    background-color: tomato;
+    color: white;
+}
+span:nth-child(even) { 
+    background-color: darkblue;
+    color: white;
+} */
+/* span:nth-child(3) {
+    background-color: greenyellow;
+}
+span:nth-child(3n + 1) {
+    background-color: violet;
+} */
+/* pseudo css가 앞에 있어도 다 적용시켜버린다.  하단의 적용사항이 변경이 안됨. 이상함.*/
+
+section span {
+    background-color: turquoise;
+}
+section > span {
+    background-color: white;
+}
+p + span {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: goldenrod;
+}
+
+p ~ span {
+    color: green;
+}
+
+input:optional {
+    border: 1px solid teal;
+}
+input:required {
+    border:1px solid tomato;
+}
+input[type="password"] {
+    height: 40px;
+}
+input[placeholder="First name"] {
+    height: 50px;
+}
+input[placeholder~="name"] {
+    width: 200px;
+}
+
+#status-button:hover {
+    background-color: teal;
+}
+/* :active이 hove문보다 위에 있으면 hover기능때문에 active기능이 뭍힌다. */
+#status-button:active {
+    background-color: tomato;
+}
+#status-input:focus {
+    background-color: yellowgreen;
+}
+a:visited {
+    background-color: antiquewhite;
+}
+#status-form:focus-within {
+    padding: 20px;
+}
+#status-form:hover input:focus {
+    background-color: thistle;
+}
+#status-form:hover input {
+    background-color: sienna;
+}
+
+:root {
+    --main-color: skyblue;
+    --byeongh : tomato; /* I'm tomato... */
+}
+
+h1 {
+    background-color: var(--main-color);
+    color: var(--byeongh);
+}

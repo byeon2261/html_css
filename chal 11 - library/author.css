@@ -1,0 +1,42 @@
+.author {
+    padding: 10px 30px;
+}
+
+.author-header {
+    margin-bottom: 20px;
+}
+
+.author-header__span {
+    font-size: 35px;
+}
+
+.author-main {
+    display: flex;
+}
+
+.author-picture__img {
+    width: 150px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.author-introduce {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.author-introduce > div {
+    height: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.author__name {
+    font-size: 30px;
+}
+
+.author__discription {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+}

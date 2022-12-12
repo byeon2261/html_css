@@ -1,0 +1,129 @@
+<!-- 2 learn HTML 의 내용들. 태그를 외우지말고 mdn에서 검색해서 사용하자. 가본 구성을 익히는데 집중하자.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 탭창의 이미지를 설정해준다. -->
+    <link rel="shortcut icon" size="16x16 32x32 64x64" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+    <!-- 링크를 전송할때 이미지를 설정한다. -->
+    <meta property="og:image" content="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/page/favicon.ico">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>kakao-clone</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- div를 사용하면 자동 줄 바꿈이 이뤄진다. 이것을 block라고 한다
+        대부분의 해더가 block이다. inline인 종류를 기억해주자. -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- span, a, img 는 inline 이다. -->
+    <span>hello</span>
+    <span>hello</span>
+    <!-- paragragh는 block이다. -->
+    <p>
+        HTML p 요소는 하나의 문단을 나타냅니다. 시각적인 매체에서, 문단은 보통 인접 블록과의 여백과 첫 줄의 들여쓰기로 구분하지만, HTML에서 문단은
+    </p>
+    <span>hello</span>
+    <span>hello</span>
+    <img src="https://item.kakaocdn.net/do/41093069df09b5e99006b8f774b95b68f604e7b0e6900f9ac53a43965300eb9a" />
+    <span>hello</span>
+    <div id="first">
+        <div id="second">
+            <div id="third">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- inline-block은 고루하며 매우 많은 문제가 있다.
+        1. 요소사이에 빈공간이 있다. (margin값이 없다.)
+        2. 반응형 웹환경에서는 작업할 수가 없다. (화면크기에 따라 디자인이 변경되지 않는다.)
+        >>> flex를 사용하자..
+    -->
+    <div style="display: inline-block; height: 50; width: 50; background-color: red;" ></div>
+
+    <!-- flexbox 사용 규칙
+        1. 자식 엘리멘트에는 어떤것도 적지 않는다. (예를들어 div의 부모(body)에 display = flex를 부여(body가 flex 컨테이너) )
+        2. justify-content(주축), align-items(교차축) 이 사용가능해진다. flexbox 부가 기능.
+        3. 수평(주축) 조절: main axis, 수직(교차축) 조절: cross axis
+    -->
+    </br><label>Flex Box</label>
+    <section id="flex">
+        <div></div>
+        <div style="background-color: gray;"></div>
+        <div></div>
+    </section>
+    <section id="fix">
+        <label>position fix</label>
+        <h1 style="color: black; font-size:50px;">Learning CSS</h1>
+    </section>
+    </br><label>relative Box</label>
+    <section id="relative">
+        <div class="nor-div">
+            <div id="rel-point" class="nor-div"></div>
+            <div id="abs-point" class="nor-div"></div>
+        </div>
+    </section>
+    </br><label>pseudo Box</label>    
+    <section id="pseudo-selector">
+        <div class="nor-div"></div>
+        <div class="nor-div"></div>
+        <div class="nor-div"></div>
+        <div class="nor-div"></div>
+        <div class="nor-div"></div>
+    </section>
+    <section id="pseudo-selector_1">
+        <span>hello</span><span>hello</span><span>hello</span>
+        <span>hello</span><span>hello</span><span>hello</span>
+        <span>hello</span><span>hello</span><span>hello</span>
+        <span>hello</span><span>hello</span><span>hello</span>
+        <span>hello</span><span>hello</span><span>hello</span>
+        <span>hello</span><span>hello</span><span>hello</span>
+        <span>hello</span><span>hello</span><span>hello</span>
+    </section>
+    </br><label>combinator box</label>
+    <section id="combinator">
+        <span>hello span</span>
+        <p>
+            I say <span>inside span</span>
+        </p>
+        <label>I'm not span</label>
+        <p> retried..</p>
+        <span>good bye span</span>
+        <h1>요소를 찾는 방법들이다. 매우 유요한 방법들이니 숙지하자 !!</h1>
+        <span>span2</span>
+    </section>
+    </br><label>pseudo Box 2</label>    
+    <section id="pseudo-selector-two">
+        <div class="nor-div">
+            <form>
+                <input type="text" placeholder="First name" />
+                <input type="text" placeholder="Last name" />
+                <input type="password" required placeholder="password" />
+            </form>
+        </div>
+        <h1>진짜 멋진거 같아.(feat.니꼬) :attribute selector</h1>
+    </section>
+    </br><label>status Box</label>
+    <section id="status">
+        <input type="text" id="status-input" placeholder="id">
+        <input type="text" id="status-input" placeholder="password">
+        <button id="status-button">눌러 봐</button>
+        <a href="https://google.com">google</a>
+        <a href="https://google.com">not clicked the google</a>
+        <form id="status-form">
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+        </form>
+        <h1>정말 정말 정말 많이 쓰인다.(feat.니꼬)</h1>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

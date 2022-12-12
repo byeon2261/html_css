@@ -1,0 +1,31 @@
+.book {
+    padding: 10px 30px;
+}
+
+.book-top {
+    margin-bottom: 20px;
+}
+
+.book-top__header {
+    font-size: 35px;
+}
+
+.book-list {
+    display: flex;
+}
+
+.book-btn {
+    margin-right: 30px;
+}
+
+.book-link__img {
+    width: 105px;
+    height: 165px;
+}
+.book-score {
+    display: flex;
+    justify-content: center;
+}
+.book-score i {
+    margin: 20px 2px;
+}

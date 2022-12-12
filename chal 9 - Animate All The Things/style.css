@@ -1,0 +1,116 @@
+body {
+    background-color: #6CBCBE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+article {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+#circle {
+    justify-content: space-around;
+}
+#rect {
+    justify-content: space-evenly;
+
+}
+
+#circle div {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#rect div {
+    width: 20px;
+    height: 60px;
+    background-color: white;
+}
+
+@keyframes circleTopAround {
+    20% {
+        transform: translateX(0) translateY(0);
+    }
+    35%{
+        transform: translateX(25px) translateY(-32px);
+    }
+    50% {
+        transform: translateX(50px) translateY(-50px);
+    }
+    65% {
+        transform: translateX(75px) translateY(-32px);
+    }
+    80% {
+        transform: translateX(100px) translateY(0);
+    }
+    100% {
+        transform: translateX(100px) translateY(0);
+    }
+}
+#circle div:first-child {
+    animation: circleTopAround 1s linear infinite;
+}
+
+@keyframes circleBottomAround {
+    20% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-25px) translateY(32px);
+    }
+    50% {
+        transform: translateX(-50px) translateY(50px);
+    }
+    65% {
+        transform: translateX(-75px) translateY(32px);
+    }
+    80% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+#circle div:last-child {
+    animation: circleBottomAround 1s linear infinite;
+}
+
+@keyframes rectFirstAction {
+    10% {height: 60px;} 30% {height: 130px;} 50% {height: 60px;}
+}
+@keyframes rect2thAction {
+    20% {height: 60px;} 40% {height: 130px;} 60% {height: 60px;}
+}
+@keyframes rect3thAction {
+    30% {height: 60px;} 50% {height: 130px;} 70% {height: 60px;}
+}
+@keyframes rect4thAction {
+    40% {height: 60px;} 60% {height: 130px;} 80% {height: 60px;}
+}
+@keyframes rect5thAction {
+    50% {height: 60px;} 70% {height: 130px;} 90% {height: 60px;}
+}
+#rect div:first-child {
+    animation: rectFirstAction 1s ease-in-out infinite;
+}
+#rect div:nth-child(2) {
+    animation: rect2thAction 1s ease-in-out infinite;
+}
+#rect div:nth-child(3) {
+    animation: rect3thAction 1s ease-in-out infinite;
+}
+#rect div:nth-child(4) {
+    animation: rect4thAction 1s ease-in-out infinite;
+}
+#rect div:nth-child(5) {
+    animation: rect5thAction 1s ease-in-out infinite;
+}
+

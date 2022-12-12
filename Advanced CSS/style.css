@@ -1,0 +1,160 @@
+section {
+    height: 200px;
+    border: black 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a {
+    color: wheat;
+    background-color: tomato;
+    text-decoration: none;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 40px;
+    margin: 5px;
+    width: 200px;
+}
+
+#tran-first {
+    /* transition은 status값이 없는 곳에 적용시켜야 한다. (적용시킬 대상, 딜레이시간, 효과스타일 ) 
+        효과스타일 >>> (https://matthewlein.com/tools/ceaser)
+    */
+    transition: background-color 0.3s ease-in-out, color 1s ease-in-out;
+}
+#tran-second {
+    transition: all 2s ease-in-out;
+}
+.trans:hover {
+    color: tomato;
+    background-color: wheat;
+    border-radius: 25px;
+}
+
+#tran2-first {
+    transition: background-color 0.3s ease-in-out, color 1s cubic-bezier(0.075, 0.820, 0.165, 1.000), 
+                width 2s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+#tran2-second {
+    transition: all 2s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.trans2:hover {
+    color: tomato;
+    background-color: wheat;
+    border-radius: 25px;
+    width: 350px;
+}
+
+#nomad-turben {
+    transform: rotateX(40deg) rotateY(70deg) rotate(45deg);
+    transform: rotateZ(45deg) scaleY(2);
+    /* transform: rotateX(45deg); */
+    /* transform: rotate(45deg); */
+    /* 두개를 쓰면 하나만 적용된다. 한번적용할때 모든 설정값을 넣어주자. */
+    transition: transform 1s ease-in-out;
+}
+#nomad-turben2 {
+    /* translate를 사용할 경우 다른 요소에는 영향을 미치지 않는다. 3d작업을 하는 것이다. */
+    transform: scale(2, 3) translateX(60px) skew(50deg);
+    transition: transform 1s ease-in-out;
+}
+.turben-img {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%; 
+}
+#nomad-turben:hover {
+    transform: skew(60deg);
+}
+#nomad-turben2:hover {
+    transform: rotateZ(45deg) scaleY(2) skew(0deg);
+}
+#nomad-turben3 {
+    transition: transform 2s ease-in-out;
+}
+#nomad-turben3:hover {
+    transform: rotateX(360deg) scale(0.5);
+}
+
+.nomad-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+@keyframes superSexyCoinFlip {
+    from {
+        transform: rotateX(0);
+    }
+    to {
+        transform: rotateX(360deg) translateX(100px);
+    }
+}
+#nomad-img {
+    animation: superSexyCoinFlip 8s ease-in-out;
+}
+#nomad-img2 {
+    animation: superSexyCoinFlip 2s ease-in-out infinite;
+}
+
+@keyframes superSexyCoinFlip-per {
+    0% {
+        transform: rotateY(0); 
+    }
+    25% {
+        transform: scale(2);
+        border-radius: 50%;
+    }
+    50% {
+        transform: rotateY(180deg);
+        border-radius: 0px;
+        border-color: tomato;
+        opacity: 0.1;
+    }
+    75% {
+        transform: scale(4); 
+    }
+    100% {
+        /* transform: rotateX(0); */  /* 값을 넣지 않아도 적용이된다. 원래값으로 적용되는듯 하다. 
+                                         translateX(0px)를 넣지않아도 되듯이.. */    
+    }
+}
+/* https://animate.style/ 에서 가져온 코드 */
+@-webkit-keyframes wobble {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    15% {
+      -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+      transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+  
+    30% {
+      -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+      transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    45% {
+      -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+      transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    60% {
+      -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+      transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+  
+    75% {
+      -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+      transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+}
+
+#nomad-two-img {
+    animation: superSexyCoinFlip-per 4s ease-in-out infinite;
+}
